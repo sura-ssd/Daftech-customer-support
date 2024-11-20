@@ -1,0 +1,590 @@
+@import "~@flaticon/flaticon-uicons/css/all/all";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 15px;
+}
+
+#bell {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  left: 12px;
+}
+.scroll-to-top {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #0a58ca;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  z-index: 54545;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.success-modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: #fff;
+}
+#contact{
+  background-color: rgb(187, 204, 246);
+  
+}
+.message {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.message.success {
+  background-color: #66bb6a;
+  color: #ffffff;
+}
+
+.message.error {
+  background-color: #ef5350;
+  color: #ffffff;
+}
+
+.message.show {
+  opacity: 1;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner {
+  position: absolute;
+  animation: rotate 1s linear infinite;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #5ba8e1;
+  transform-origin: 40px 40px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styles for .single-services-box in light mode */
+.single-services-box {
+  position: relative;
+  z-index: 1;
+  padding: 35px 25px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 30px 0px rgba(82, 90, 101, 0.12);
+  margin-bottom: 30px;
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.single-services-box .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #eeeefd;
+  border-radius: 50%;
+  color: #2980b9;
+  transition: background-color 0.6s, transform 0.6s, color 0.6s;
+  margin-bottom: 15px;
+}
+
+.single-services-box .icon i::before {
+  font-size: 30px;
+}
+
+.single-services-box h3 {
+  font-size: 20px;
+  position: absolute;
+  top: 55px;
+  left: 95px;
+  margin-bottom: 0;
+  transition: color 0.4s;
+}
+
+.single-services-box h3 a {
+  display: inline-block;
+}
+
+.single-services-box p {
+  font-size: 15px;
+  transition: color 0.4s;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.single-services-box .services-btn {
+  margin-top: 16px;
+}
+
+.single-services-box .services-btn .services-btn-one {
+  display: inline-block;
+  font-size: 15px;
+  color: #5a5c5f;
+  font-weight: 600;
+  transition: color 0.4s;
+}
+
+.single-services-box .services-btn i {
+  position: relative;
+  transition: color 0.4s;
+  color: #5a5c5f;
+  top: 1.4px;
+}
+
+.single-services-box .services-btn i::before {
+  font-size: 14px;
+}
+
+/* Styles for .single-services-box in dark mode */
+.dark-mode .single-services-box {
+  background-color: #19376d;
+  box-shadow: 0px 5px 30px 0px rgba(82, 90, 101, 0.12);
+}
+
+.dark-mode .single-services-box .icon {
+  background-color: #19376d;
+  color: #ffffff;
+}
+
+/* Hover styles for both light and dark modes */
+.single-services-box:hover {
+  transform: translateY(-10px);
+  background-color: #354f75;
+}
+
+.single-services-box:hover::before {
+  height: 100%;
+}
+
+.single-services-box:hover .icon {
+  transform: rotateY(360deg);
+  background-color: #ffffff;
+  color: #19376d;
+}
+
+.single-services-box:hover h3,
+.single-services-box:hover h3 a,
+.single-services-box:hover p,
+.single-services-box .services-btn .services-btn-one,
+.single-services-box .services-btn i {
+  color: #ffffff;
+}
+
+
+
+#desc{
+  background-color: #f9fdff;
+}
+@keyframes spin {
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .animate-spin {
+	animation: spin 1s linear infinite;
+  }
+  @media only screen and (max-width:600px) {
+    .map{
+      width: 330px;
+    }
+  }
+
+  /*Dark Mode styles*/
+  .app {
+    background-color: #ffffff; /* Light mode background color */
+    color: #333; /* Light mode text color */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .dark-mode {
+    background-color: #121b2d; 
+    color: #eaeaea;
+  }
+  
+  /* Dark mode styles for cards */
+  .dark-mode .card {
+    background-color: #19376D; 
+    color: #eaeaea; 
+  }
+  
+  /* Dark mode styles for images */
+  .dark-mode img {
+    filter: brightness(75%); /* Darken images in dark mode */
+  }
+ 
+  
+  #navbar {
+    background-color: #f8f9fa; 
+    color: #333333;;
+  }
+  
+  #navbar img {
+    filter: invert(0); /* Normal image color for light mode */
+  }
+  
+  /* Styles for the navbar in dark mode */
+  .dark-mode #navbar {
+    background-color: #384c65; 
+    color: #ffffff;
+  }
+  
+  .dark-mode #navbar img {
+    filter: invert(1); /* Inverted image color for dark mode */
+  }
+
+  #navbar .nav-link {
+    color: #333333; 
+  }
+  
+  /* Styles for the navbar items in dark mode */
+  .dark-mode #navbar .nav-link {
+    color: #ffffff; /* Dark mode text color for navbar items */
+  }
+  
+  /* Styles for MDBNavbarNav in normal mode */
+  #navbar .nav-link .nav-item {
+    background-color: #ffffff; 
+  }
+  
+  /* Styles for MDBNavbarNav in dark mode */
+  .dark-mode #navbar .nav-link .nav-item {
+    background-color: #333333; 
+  }
+
+  .dark-mode #contact {
+    background-color: #013450; 
+    
+  }
+  .dark-mode #contact .form-label {
+    color: #ffffff; 
+  }
+
+  .dark-mode #desc {
+    background-color: #19376D; 
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .accordion-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .accordion-icon svg {
+    vertical-align: middle;
+  }
+  
+  .accordion-icon .closed {
+    transform: rotate(0deg);
+  }
+  
+  .accordion-icon .open {
+    transform: rotate(45deg);
+  }
+  
+  .accordion-item {
+    border: none;
+  }
+  
+  .accordion-header {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-body {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Change the colors for dark mode */
+  .app.dark-mode .faq-container {
+    background-color: #27355b;
+  }
+  
+  .app.dark-mode h1 {
+    color: #fff;
+  }
+  
+  .app.dark-mode .accordion-header {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .app.dark-mode .accordion-body {
+    background-color: #555;
+    border-color: #666;
+    color: #fff;
+  }
+
+  .notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none; /* Hide it by default */
+    z-index: 1000; /* Make sure it's on top */
+  }
+  
+  .notification.show {
+    display: block; /* Show it when the 'show' class is added */
+    animation: fadeOut 5s ease-in-out forwards; /* Animate the fade-out effect */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .notification.show.error {
+    background-color: #f44336; /* Red background color for errors */
+    color: white; /* White text color */
+  }
+  /* SimpleFAQ.css */
+
+.faq-heading {
+  font-family: 'Your Custom Font', sans-serif;
+  font-size: 24px;
+  color: #333; /* Custom color */
+}
+
+.faq-card-title {
+  font-family: 'Your Custom Font', sans-serif;
+  font-size: 18px;
+  color: #666; /* Custom color */
+}
+
+.faq-card-text {
+  font-family: 'Your Custom Font', sans-serif;
+  font-size: 14px;
+  color: #999; /* Custom color */
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+ 
+}
+
+.faq-image {
+  width: 100%; 
+  max-height: 500px; 
+  object-fit: cover; 
+  margin-bottom: 20px; 
+}
+
+
+
+
+/* General FAQ Container */
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+}
+
+/* FAQ Heading */
+.faq-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #1a3e59;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* FAQ Card */
+.faq-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FAQ Question Title */
+.faq-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a3e59;
+}
+
+/* FAQ Answer Text */
+.faq-card-answer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #4a4a4a;
+  background-color: #e6f7f5;
+  padding: 10px;
+  border-left: 4px solid #48c9b0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Status - Answered */
+.faq-card-status.answered {
+  font-family: 'Poppins', sans-serif;
+  color: #28a745; /* Green for answered */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Status - Unanswered */
+.faq-card-status.unanswered {
+  font-family: 'Poppins', sans-serif;
+  color: #e74c3c; /* Red for unanswered */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Posted Date Styling */
+.faq-card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #707070;
+  margin-top: 5px;
+}
+
+/* Pagination Styling */
+.pagination-button {
+  background-color: #1a3e59;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #12567b;
+}
+
+.pagination-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Form Styling */
+.faq-form-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #1a3e59;
+}
+
+.faq-textarea {
+  border: 2px solid #1a3e59;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.faq-textarea:focus {
+  border-color: #48c9b0;
+  box-shadow: 0px 0px 5px rgba(72, 201, 176, 0.6);
+}
+
+/* Notification Message */
+.notification {
+  font-family: 'Roboto', sans-serif;
+  background-color: #48c9b0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+
